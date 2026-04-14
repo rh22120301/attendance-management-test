@@ -27,7 +27,6 @@ DB_PASSWORD=laravel_pass
 9. php artisan storage:link
 
 ### ER図
-<img width="759" height="971" alt="flea-market-test" src="https://github.com/user-attachments/assets/74479951-1832-45c2-95b7-370582fca741" />
 
 
 
