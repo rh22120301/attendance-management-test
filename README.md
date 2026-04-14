@@ -1,4 +1,4 @@
-# フリマアプリ模擬案件
+# 勤怠アプリ模擬案件
 ## 環境構築
 ### Dockerビルド
 1. git clone git@github.com:rh22120301/attendance-management-test.git
