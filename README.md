@@ -2,7 +2,7 @@
 ## 環境構築
 ### Dockerビルド
 1. git clone git@github.com:rh22120301/attendance-management-test.git
-2. cd flea-market-test
+2. cd attendance-management-test
 3. docker-compose up -d
 
 ### Laravel環境構築
