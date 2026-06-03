@@ -36,5 +36,6 @@ DB_PASSWORD=laravel_pass
 - Laravel Framework 8.83.8
 
 ### URL
-- 開発環境：http://localhost/
+- 開発環境(一般ユーザー画面)：http://localhost/
+- 開発環境(管理者画面):http://localhost/admin/login
 - phpMyAdmin:：http://localhost:8080/
