@@ -27,6 +27,7 @@ DB_PASSWORD=laravel_pass
 9. php artisan storage:link
 
 ### ER図
+<img width="711" height="652" alt="attendance-management-er" src="https://github.com/user-attachments/assets/9931128a-3c63-4df7-90e7-1edc861d9f62" />
 
 
 
