@@ -66,7 +66,6 @@
                         </td>
                     </tr>
 
-                    {{-- 既存休憩 --}}
                     @foreach($attendance->breaktimes as $index => $breaktime)
                     <tr class="attendance-list__group">
                         <th class="attendance-list__title">休憩{{ $index + 1 }}</th>
@@ -99,7 +98,6 @@
                     </tr>
                     @endforeach
 
-                    {{-- 新規休憩 --}}
                     @php
                         $newIndex = $attendance->breaktimes->count();
                     @endphp
@@ -134,7 +132,6 @@
                         </td>
                     </tr>
 
-                    {{-- 備考 --}}
                     <tr class="attendance-list__group">
                         <th class="attendance-list__title">備考</th>
 

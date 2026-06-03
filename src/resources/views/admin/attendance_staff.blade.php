@@ -14,28 +14,13 @@
     <div class="attendance-list__table">
 
         <div class="month-nav__group">
-            <a
-                class="month-nav"
-                href="?month={{ $month->copy()->subMonth()->format('Y-m') }}"
-            >
-                ← 前月
-            </a>
+            <a class="month-nav" href="?month={{ $month->copy()->subMonth()->format('Y-m') }}">← 前月</a>
 
             <form method="GET" style="display:inline;">
-                <input
-                    type="month"
-                    name="month"
-                    value="{{ $month->format('Y-m') }}"
-                    onchange="this.form.submit()"
-                >
+                <input type="month" name="month" value="{{ $month->format('Y-m') }}" onchange="this.form.submit()">
             </form>
 
-            <a
-                class="month-nav"
-                href="?month={{ $month->copy()->addMonth()->format('Y-m') }}"
-            >
-                翌月 →
-            </a>
+            <a class="month-nav" href="?month={{ $month->copy()->addMonth()->format('Y-m') }}">翌月 →</a>
         </div>
 
         <div class="table-wrapper">
@@ -90,6 +75,10 @@
                 @endforeach
 
             </table>
+            <div class="submit-button">
+                <a href="{{ route('admin.attendance.export', ['user_id' => $user->id,'month'=> $month->format('Y-m')]) }}"
+                class="submit-button__csv">CSV出力</a>
+            </div>
         </div>
     </div>
 </div>

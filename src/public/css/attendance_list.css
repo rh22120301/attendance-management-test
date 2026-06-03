@@ -72,3 +72,18 @@
     color: black;
     letter-spacing: 1px;
 }
+.submit-button{
+    width: 100%;
+    text-align: right;
+}
+.submit-button__csv{
+    background: rgb(0, 0, 0);
+    color: white;
+    font-size: 15px;
+    letter-spacing: 2px;
+    padding: 5px 12px;
+    border-radius: 4px;
+    margin: 20px auto;
+    display: inline-block;
+    text-decoration: none;
+}

@@ -59,17 +59,3 @@
     font-size: 14px;
     color: rgb(30, 130, 210);
 }
-
-@media screen and (max-width: 1540px) {
-    .login-form__content
-    {
-        max-width: 70%;
-    }
-}
-
-@media screen and (max-width: 850px) {
-    .login-form__content
-    {
-        max-width: 100%;
-    }
-}

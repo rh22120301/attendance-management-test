@@ -88,6 +88,7 @@ class AdminController extends Controller
 
         return view('admin.approve_confirmation', compact('requestData'));
     }
+
     public function approve($id)
     {
         $requestData = AttendanceRequest::findOrFail($id);
@@ -121,10 +122,47 @@ class AdminController extends Controller
         );
 
         return view(
-            'admin.attendance_staff',
-            compact('user', 'attendances', 'dates', 'month')
-        );
+            'admin.attendance_staff',compact('user', 'attendances', 'dates', 'month'));
     }
+    public function exportCsv(Request $request)
+    {
+        $userId = $request->user_id;
+        $month  = $request->month;
+
+        $fileName = "attendance_{$userId}_{$month}.csv";
+
+        $headers = [
+            'Content-Type'        => 'text/csv',
+            'Content-Disposition' => "attachment; filename=\"$fileName\"",
+        ];
+
+        $callback = function () use ($userId, $month) {
+            $handle = fopen('php://output', 'w');
+
+            fputcsv($handle, ['日付', '出勤', '退勤', '休憩', '合計']);
+
+            $attendances = \App\Models\Attendance::where('user_id', $userId)
+                ->whereYear('work_date', substr($month, 0, 4))
+                ->whereMonth('work_date', substr($month, 5, 2))
+                ->orderBy('work_date')
+                ->get();
+
+            foreach ($attendances as $a) {
+                fputcsv($handle, [
+                    $a->work_date,
+                    optional($a->clock_in)->format('H:i'),
+                    optional($a->clock_out)->format('H:i'),
+                    $a->break_formatted,
+                    $a->work_formatted,
+                ]);
+            }
+
+            fclose($handle);
+        };
+
+        return response()->streamDownload($callback, $fileName, $headers);
+    }
+
 
         public function showDetail($id, Request $request)
     {
