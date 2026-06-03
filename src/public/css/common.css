@@ -1,0 +1,104 @@
+.header{
+    width: 100%;
+    padding: 2px;
+    background: black;
+}
+.header__inner{
+    
+    padding: 10px;
+}
+.header-nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 0;
+    align-items: center;
+}
+.header-title{
+
+    margin: 0;
+}
+.header__logo{
+    width: 300px;
+}
+
+.header-action{
+    display: flex;
+    padding: 0;
+    list-style: none;
+    align-items: center;
+}
+
+.header-nav__item{
+    margin: 0 7px;
+}
+.header-nav__list{
+    text-decoration: none;
+    color: white;
+    margin: 0 0 0 5px;
+
+}
+.header-nav__button{
+    font-size: 16px;
+    color: white;
+    background: transparent;
+    border: none;
+    margin: 0 0 0 8px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.header-nav__mypage{
+    font-size: 16px;
+    color: white;
+    margin: 0 8px;
+    text-decoration: none;
+}
+
+.header-nav__sellpage{
+    display: inline-block;
+    width: 60px;
+    padding: 3px;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+    background: white;
+    border-radius: 2px;
+    margin: 0 8px;
+}
+
+.search-form__keyword{
+    margin: 0;
+    
+}
+.search-form__item-input{
+    width: 400px;
+    padding: 10px;
+    margin: 0 auto;
+}
+.search-form__item-input::placeholder {
+    color: #000;
+    opacity: 1;
+}
+
+@media screen and (max-width: 1400px) {
+    .search-form__item-input{
+    width: 300px;
+        padding: 5px;
+    }
+    .header__logo{
+        width: 200px;
+    }   
+}
+@media screen and (max-width: 850px) {
+    .header__logo{
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .search-form__item-input{
+        width: 250px;
+    }
+}

@@ -1,0 +1,92 @@
+.attendance-list__content{
+    width: 100%;
+    background: rgb(231, 231, 231);
+    padding: 50px 0 200px 0;
+    margin: 0 auto;
+    text-align: center;
+}
+.attendance-list__text{
+    width: 70%;
+    margin: 0 auto;
+    padding: 8px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    border-left: 6px solid black;
+}
+.attendance-list__table{
+    width: 100%;
+    padding: 20px;
+}
+.table-wrapper{
+    width: 70%;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.attendance-list{
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0 2px;
+}
+.attendance-list__group{
+    width: 100%;
+    margin: 10px;
+    background: green;
+}
+.attendance-list__title{
+    background: white;
+    color: rgb(86, 86, 86);
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 5px 10px 5px 0;
+    margin: 10px;
+}
+.attendance-list__detail{
+    background: white;
+    color: rgb(86, 86, 86);
+    padding: 5px 10px 5px 0;
+    margin: 10px;
+    border-top: 1px solid rgb(231, 231, 231);
+    letter-spacing: 1px;
+}
+.attendance-detail__textarea{
+    width: 100%;
+}
+.error-message {
+    color: #e60033;
+    font-size: 14px;
+    margin-top: 4px;
+}
+.error-message__pending {
+    color: #e60033;
+    font-size: 14px;
+    margin-top: 4px;
+    text-align: right;
+}
+.submit-button{
+    width: 100%;
+    text-align: right;
+}
+.submit-button__base{
+    background: black;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 2px;
+    padding: 5px 20px;
+    border-radius: 4px;
+    margin: 20px auto;
+    cursor: pointer;
+}
+.submit-button__approved{
+    background: rgb(100, 100, 100);
+    color: white;
+    font-size: 15px;
+    letter-spacing: 2px;
+    padding: 5px 12px;
+    border-radius: 4px;
+    margin: 20px auto;
+    display: inline-block;
+}
